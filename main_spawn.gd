@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var enemy_scene: PackedScene
-@export var max_enemies: int = 1
-@export var max_total_spawned: int = 1
+@export var max_enemies: int = 4
+@export var max_total_spawned: int = 10
 
 
 @export var spawn_points: Array[Vector2] = []
