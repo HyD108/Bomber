@@ -1,0 +1,407 @@
+[gd_scene load_steps=15 format=4 uid="uid://cvml4rslpq0kg"]
+
+[ext_resource type="Texture2D" uid="uid://bv3od7dxw6lut" path="res://Assets/Sprites.png" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://p13a2cwwrp8m" path="res://Scenes/player.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://clo42xkncjyds" path="res://Assets/Set 1.png" id="2_d1ilt"]
+[ext_resource type="Script" uid="uid://ciw0qe77n0alj" path="res://Scripts/camera_follow.gd" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c6ewijahclpti" path="res://Scenes/brick_wall.tscn" id="4_jjvhh"]
+[ext_resource type="Resource" uid="uid://ccm6bnleewp4r" path="res://Resources/speed_up.tres" id="6_21xkr"]
+[ext_resource type="Resource" uid="uid://waaxodqgfubn" path="res://Resources/invincibility.tres" id="6_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://d4dy36pgwdw31" path="res://Scenes/enemy.tscn" id="7_6bp64"]
+[ext_resource type="Resource" uid="uid://d3bugilkfam2u" path="res://Resources/bomb_up.tres" id="7_hptm8"]
+[ext_resource type="PackedScene" uid="uid://blq4vqp53q4ky" path="res://main_spawn.tscn" id="8_344ge"]
+[ext_resource type="Resource" uid="uid://d1ugcswqok1jv" path="res://Resources/fire_up.tres" id="8_d1ilt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
+texture = ExtResource("1_jjgbg")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+2:4/0 = 0
+7:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+2:5/0 = 0
+7:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+2:7/0 = 0
+7:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+2:8/0 = 0
+7:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+2:9/0 = 0
+7:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+7:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+2:12/0 = 0
+7:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+2:13/0 = 0
+7:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+13:22/0 = 0
+4:8/0 = 0
+4:9/0 = 0
+4:10/0 = 0
+3:4/0 = 0
+6:14/next_alternative_id = 2
+6:14/0 = 0
+6:14/1 = 1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ilt"]
+texture = ExtResource("2_d1ilt")
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+6:4/0 = 0
+5:4/0 = 0
+5:2/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:4/0 = 0
+4:3/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+16:2/0 = 0
+15:2/0 = 0
+15:3/0 = 0
+15:4/0 = 0
+14:4/0 = 0
+13:4/0 = 0
+12:4/0 = 0
+11:4/0 = 0
+10:4/0 = 0
+9:4/0 = 0
+8:4/0 = 0
+8:5/0 = 0
+7:5/0 = 0
+6:5/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+9:5/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+14:2/0 = 0
+12:2/0 = 0
+11:2/0 = 0
+10:2/0 = 0
+9:2/next_alternative_id = 2
+9:2/0 = 0
+8:2/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+13:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8gbba"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_bo1nx")
+sources/3 = SubResource("TileSetAtlasSource_d1ilt")
+
+[node name="main" type="Node"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." groups=["tilemap"]]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD4//n/AAADAAMAAAD4//r/AAADAAMAAAD4//v/AAADAAMAAAD4//z/AAADAAMAAAD4//3/AAADAAMAAAD4//7/AAADAAMAAAD4////AAADAAMAAAD4/wAAAAADAAMAAAD4/wEAAAADAAMAAAD4/wIAAAADAAMAAAD4/wMAAAADAAMAAAD4/wQAAAADAAMAAAD6//n/AAADAAMAAAD7//n/AAADAAMAAAD8//n/AAADAAMAAAD9//n/AAADAAMAAAD+//n/AAADAAMAAAD///n/AAADAAMAAAAAAPn/AAADAAMAAAABAPn/AAADAAMAAAACAPn/AAADAAMAAAADAPn/AAADAAMAAAAEAPn/AAADAAMAAAAFAPn/AAADAAMAAAAGAPn/AAADAAMAAAAHAPn/AAADAAMAAAAIAPn/AAADAAMAAAAJAPn/AAADAAMAAAAKAPn/AAADAAMAAAALAPn/AAADAAMAAAAMAPn/AAADAAMAAAANAPn/AAADAAMAAAD6//v/AAADAAMAAAD6//3/AAADAAMAAAD6////AAADAAMAAAD6/wEAAAADAAMAAAD6/wMAAAADAAMAAAD4/wUAAAADAAMAAAD5/wUAAAADAAMAAAD6/wUAAAADAAMAAAD7/wUAAAADAAMAAAD8/wUAAAADAAMAAAD9/wUAAAADAAMAAAD+/wUAAAADAAMAAAD//wUAAAADAAMAAAAAAAUAAAADAAMAAAABAAUAAAADAAMAAAACAAUAAAADAAMAAAADAAUAAAADAAMAAAAEAAUAAAADAAMAAAAFAAUAAAADAAMAAAAGAAUAAAADAAMAAAAHAAUAAAADAAMAAAAIAAUAAAADAAMAAAAJAAUAAAADAAMAAAAKAAUAAAADAAMAAAALAAUAAAADAAMAAAAMAAUAAAADAAMAAAANAAUAAAADAAMAAAAOAAUAAAADAAMAAAD8//v/AAADAAMAAAD8//3/AAADAAMAAAD8////AAADAAMAAAD8/wEAAAADAAMAAAD8/wMAAAADAAMAAAD+//v/AAADAAMAAAD+//3/AAADAAMAAAD+////AAADAAMAAAD+/wEAAAADAAMAAAD+/wMAAAADAAMAAAAAAPv/AAADAAMAAAAAAP3/AAADAAMAAAAAAP//AAADAAMAAAAAAAEAAAADAAMAAAAAAAMAAAADAAMAAAACAPv/AAADAAMAAAACAP3/AAADAAMAAAACAP//AAADAAMAAAACAAEAAAADAAMAAAACAAMAAAADAAMAAAAEAPv/AAADAAMAAAAEAP3/AAADAAMAAAAEAP//AAADAAMAAAAEAAEAAAADAAMAAAAEAAMAAAADAAMAAAAGAPv/AAADAAMAAAAGAP3/AAADAAMAAAAGAP//AAADAAMAAAAGAAEAAAADAAMAAAAGAAMAAAADAAMAAAAIAPv/AAADAAMAAAAIAP3/AAADAAMAAAAIAP//AAADAAMAAAAIAAEAAAADAAMAAAAIAAMAAAADAAMAAAAKAAMAAAADAAMAAAAKAAEAAAADAAMAAAAKAP//AAADAAMAAAAKAP3/AAADAAMAAAAKAPv/AAADAAMAAAAMAPv/AAADAAMAAAAMAP3/AAADAAMAAAAMAP//AAADAAMAAAAMAAEAAAADAAMAAAAMAAMAAAADAAMAAAAOAAQAAAADAAMAAAAOAAMAAAADAAMAAAAOAAIAAAADAAMAAAAOAAEAAAADAAMAAAAOAAAAAAADAAMAAAAOAP//AAADAAMAAAAOAP7/AAADAAMAAAAOAP3/AAADAAMAAAAOAPz/AAADAAMAAAAOAPv/AAADAAMAAAAOAPr/AAADAAMAAAAOAPn/AAADAAMAAAD5//n/AAADAAMAAAA=")
+tile_set = SubResource("TileSet_8gbba")
+
+[node name="Player" parent="." instance=ExtResource("2_bo1nx")]
+z_index = 1
+position = Vector2(-80, -80)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("node_to_follow")]
+position = Vector2(56, -8)
+zoom = Vector2(3, 3)
+script = ExtResource("3_8gbba")
+node_to_follow = NodePath("../Player")
+
+[node name="BrickWalls" type="Node" parent="."]
+
+[node name="BrickWall" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-48, 0)
+power_up_res = ExtResource("6_d1ilt")
+
+[node name="BrickWall3" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-48, -80)
+power_up_res = ExtResource("6_21xkr")
+
+[node name="BrickWall4" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-16, -96)
+power_up_res = ExtResource("7_hptm8")
+
+[node name="BrickWall5" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-112, -80)
+power_up_res = ExtResource("8_d1ilt")
+
+[node name="BrickWall2" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(16, -64)
+
+[node name="BrickWall6" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(80, -48)
+
+[node name="BrickWall7" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(48, -16)
+
+[node name="BrickWall8" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(80, -64)
+
+[node name="BrickWall9" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(96, -64)
+
+[node name="BrickWall10" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(112, -64)
+
+[node name="BrickWall11" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(111, -48)
+
+[node name="BrickWall12" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(144, 0)
+
+[node name="BrickWall13" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(144, -16)
+
+[node name="BrickWall14" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(160, -1)
+
+[node name="BrickWall15" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(208, 64)
+
+[node name="BrickWall16" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(192, 64)
+
+[node name="BrickWall17" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(208, 48)
+
+[node name="Enemy" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(-80, -96)
+
+[node name="MainSpawn" parent="." instance=ExtResource("8_344ge")]
+enemy_scene = ExtResource("7_6bp64")
+spawn_markers = Array[NodePath]([NodePath("../SpawnPoint/spawn1"), NodePath("../SpawnPoint/spawn2"), NodePath("../SpawnPoint/spawn3"), NodePath("../SpawnPoint/spawn4")])
+
+[node name="SpawnPoint" type="Node" parent="."]
+
+[node name="spawn1" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(48, -95)
+
+[node name="spawn2" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(143, 34)
+
+[node name="spawn3" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(-49, 34)
+
+[node name="spawn4" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(178, -32)
