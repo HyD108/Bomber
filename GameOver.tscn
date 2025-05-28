@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnal62wt2qc0l"]
+[gd_scene load_steps=6 format=3 uid="uid://drg6yggn6so04"]
 
-[ext_resource type="Texture2D" uid="uid://dxly4s1r1hluq" path="res://Assets/feel-free-to-use-this-4k-super-bomberman-r-wallpaper-i-v0-q1vtewhealg91.jpg" id="1_eiy7p"]
-[ext_resource type="Script" uid="uid://dqv2i6tul5u3w" path="res://main_menu.gd" id="1_h7a2f"]
-[ext_resource type="FontFile" uid="uid://coemj3p2tcfiw" path="res://Assets/GrapeSoda.ttf" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://dqv2i6tul5u3w" path="res://main_menu.gd" id="1_eksk4"]
+[ext_resource type="Texture2D" uid="uid://dxly4s1r1hluq" path="res://Assets/feel-free-to-use-this-4k-super-bomberman-r-wallpaper-i-v0-q1vtewhealg91.jpg" id="2_xl4ts"]
+[ext_resource type="FontFile" uid="uid://coemj3p2tcfiw" path="res://Assets/GrapeSoda.ttf" id="3_jywu3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoqlk"]
-texture = ExtResource("1_eiy7p")
+texture = ExtResource("2_xl4ts")
 modulate_color = Color(0.313726, 0.313726, 0.313726, 0.313726)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h7a2f")
+script = ExtResource("1_eksk4")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -55,7 +55,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
-text = "Start Game"
+text = "Play Again"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -75,9 +75,9 @@ offset_top = 53.0
 offset_right = 251.0
 offset_bottom = 200.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_fonts/font = ExtResource("3_jywu3")
 theme_override_font_sizes/font_size = 80
-text = "BOMBERMAN"
+text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BomberMan"
-run/main_scene="res://Scenes/main.tscn"
+run/main_scene="uid://bnal62wt2qc0l"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,10 @@ Utils="*res://Scripts/utils.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="BomberMan"
 
 [input]
 

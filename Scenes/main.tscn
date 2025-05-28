@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cvml4rslpq0kg"]
+[gd_scene load_steps=19 format=4 uid="uid://cvml4rslpq0kg"]
 
 [ext_resource type="Texture2D" uid="uid://bv3od7dxw6lut" path="res://Assets/Sprites.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://p13a2cwwrp8m" path="res://Scenes/player.tscn" id="2_bo1nx"]
@@ -11,6 +11,9 @@
 [ext_resource type="Resource" uid="uid://d3bugilkfam2u" path="res://Resources/bomb_up.tres" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://blq4vqp53q4ky" path="res://main_spawn.tscn" id="8_344ge"]
 [ext_resource type="Resource" uid="uid://d1ugcswqok1jv" path="res://Resources/fire_up.tres" id="8_d1ilt"]
+[ext_resource type="Resource" uid="uid://borcesaub5nvd" path="res://Resources/wall_pass.tres" id="10_jkdf5"]
+[ext_resource type="Script" uid="uid://cacf65uuuvyhv" path="res://Scenes/area_2d.gd" id="12_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://bkg3eigvmu1w1" path="res://Assets/dor.tres" id="13_jkdf5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_jjgbg")
@@ -311,6 +314,9 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_bo1nx")
 sources/3 = SubResource("TileSetAtlasSource_d1ilt")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsu2k"]
+size = Vector2(15, 16)
+
 [node name="main" type="Node"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." groups=["tilemap"]]
@@ -348,21 +354,26 @@ power_up_res = ExtResource("8_d1ilt")
 
 [node name="BrickWall2" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(16, -64)
+power_up_res = ExtResource("8_d1ilt")
 
 [node name="BrickWall6" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(80, -48)
+power_up_res = ExtResource("8_d1ilt")
 
 [node name="BrickWall7" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(48, -16)
+power_up_res = ExtResource("7_hptm8")
 
 [node name="BrickWall8" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(80, -64)
 
 [node name="BrickWall9" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(96, -64)
+power_up_res = ExtResource("6_d1ilt")
 
 [node name="BrickWall10" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(112, -64)
+power_up_res = ExtResource("10_jkdf5")
 
 [node name="BrickWall11" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(111, -48)
@@ -373,17 +384,60 @@ position = Vector2(144, 0)
 [node name="BrickWall13" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(144, -16)
 
+[node name="BrickWall21" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-96, 64)
+
+[node name="BrickWall22" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-80, 64)
+power_up_res = ExtResource("7_hptm8")
+
+[node name="BrickWall23" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-80, 48)
+
+[node name="BrickWall24" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-64, 64)
+
+[node name="BrickWall25" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-32, 32)
+
+[node name="BrickWall27" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(208, -96)
+
+[node name="BrickWall28" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(208, -80)
+
+[node name="BrickWall29" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(208, -65)
+
+[node name="BrickWall30" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(192, -65)
+
+[node name="BrickWall26" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(-16, 16)
+
 [node name="BrickWall14" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(160, -1)
+power_up_res = ExtResource("8_d1ilt")
 
 [node name="BrickWall15" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(208, 64)
 
 [node name="BrickWall16" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(192, 64)
+power_up_res = ExtResource("8_d1ilt")
 
 [node name="BrickWall17" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
 position = Vector2(208, 48)
+power_up_res = ExtResource("7_hptm8")
+
+[node name="BrickWall18" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(128, 64)
+
+[node name="BrickWall19" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(95, 64)
+
+[node name="BrickWall20" parent="BrickWalls" instance=ExtResource("4_jjvhh")]
+position = Vector2(111, 64)
 
 [node name="Enemy" parent="." instance=ExtResource("7_6bp64")]
 position = Vector2(-80, -96)
@@ -391,6 +445,7 @@ position = Vector2(-80, -96)
 [node name="MainSpawn" parent="." instance=ExtResource("8_344ge")]
 enemy_scene = ExtResource("7_6bp64")
 spawn_markers = Array[NodePath]([NodePath("../SpawnPoint/spawn1"), NodePath("../SpawnPoint/spawn2"), NodePath("../SpawnPoint/spawn3"), NodePath("../SpawnPoint/spawn4")])
+exit_door_path = NodePath("../Door")
 
 [node name="SpawnPoint" type="Node" parent="."]
 
@@ -405,3 +460,18 @@ position = Vector2(-49, 34)
 
 [node name="spawn4" type="Marker2D" parent="SpawnPoint"]
 position = Vector2(178, -32)
+
+[node name="Door" type="Area2D" parent="."]
+position = Vector2(177, 64)
+script = ExtResource("12_fdnlq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+texture = ExtResource("13_jkdf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_wsu2k")
+
+[connection signal="body_entered" from="Door" to="MainSpawn" method="_on_door_body_entered"]
